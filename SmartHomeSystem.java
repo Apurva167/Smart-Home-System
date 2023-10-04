@@ -137,4 +137,12 @@ public class SmartHomeSystem {
     	}
     	System.out.print("]");
     }
+
+     public void automatedTriggers() {
+    	System.out.print("[");
+    	for(AutomatedTrigger x:automatedTriggers) {
+    	   System.out.print("{condition:"+x.getCondition()+", action: \""+x.getAction()+"\"}");
+    	}
+    	System.out.print("]");
+    }
 }
