@@ -43,6 +43,7 @@ public class AutomatedTrigger {
     
     // Execute the action on the specified device
     public void execute(Map<Integer, Device> devices) {
+	    
     	StringBuilder actionNameSb=new StringBuilder();
     	int i=0;
     	while(action.charAt(i)!='(') {
@@ -50,9 +51,11 @@ public class AutomatedTrigger {
     	}
     	String actionName=actionNameSb.toString();
     	int targetDeviceId=action.charAt(++i)-48;
+	    
         if (actionName.equals("TurnOn")) {
             devices.get(targetDeviceId).turnOn();
-        } else if (actionName.equals("TurnOff")) {
+        }
+	else if (actionName.equals("TurnOff")) {
             devices.get(targetDeviceId).turnOff();
         }
     }     
