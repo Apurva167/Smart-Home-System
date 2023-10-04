@@ -129,4 +129,12 @@ public class SmartHomeSystem {
     	System.out.println("\""+devices.get(x).getType()+" "+devices.get(x).getId()+" "+devices.get(x).getStatus()+"\"");
     	}
     }
+
+    public void scheduledTask() {
+    	System.out.print("[");
+    	for(ScheduledTask x:scheduledTasks) {
+    	   System.out.print("{device:"+x.getDevice().getId()+", time: \""+x.getTime()+"\", command: \""+ x.getAction()+"\"}");
+    	}
+    	System.out.print("]");
+    }
 }
