@@ -24,4 +24,11 @@ public class ScheduledTask {
     public String getTime() {
         return time;
     }
+    public String getAction() {
+        return action;
+    }
+    public Device getDevice() {
+        return device;
+    }
+    
 }
